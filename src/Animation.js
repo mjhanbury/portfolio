@@ -8,7 +8,7 @@ const Object = ({className, offset}) => {
 
 	useEffect(() => {
 		const onScroll = e => {
-			setRadius((window.innerHeight - e.target.documentElement.scrollTop)/window.innerHeight);
+			setRadius(1 + e.target.documentElement.scrollTop/window.innerHeight);
 		};
 		window.addEventListener("scroll", onScroll);
 
